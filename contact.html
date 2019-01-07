@@ -1,43 +1,98 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Contact</title>
+		<title>Home</title>
 		<link type="text/css" rel="stylesheet" href="css/stylesheet.css"/>
- 	</head>
- 	<body>
-		<nav>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="dagplanning.html">Dagplanning</a></li>
-				<li><a href="kosten.html">Kosten</a></li>
-				<li>Contact</li>
-			</ul>
-		</nav>
- 		<div id="content">
-			<h1>Contact</h1>
-			<div class="container">
-		  <form action="action_page.php">
-			<fieldset>
-		    <label for="fname">Voornaam</label>
-		    <input type="text" id="fname" name="firstname" placeholder="Your name..">
-			</fieldset>
-			<fieldset>
-		    <label for="lname">Achternaam</label>
-		    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-			</fieldset>
-			<fieldset>
-		    <label for="country">Land</label>
-		    <select id="country" name="country">
-		      <option value="australia">Nederland</option>
-		      <option value="canada">UK</option>
-		      <option value="usa">USA</option>
-		    </select>
-			</fieldset>
-			<fieldset>
-		    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-		    <input type="submit" value="Submit">
-		  </form>
-		</div>
-		</div>
-	</body>
+<nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="dagplanning.html">Dagplanning</a></li>
+    <li><a href="kosten.html">Kosten</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        <link href='custom.css' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-lg-8 col-lg-offset-2">
+
+                    <form id="contact-form" method="post" action="contact-2.php" role="form">
+
+                        <div class="messages"></div>
+
+                        <div class="controls">
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_name">voornaam *</label>
+                                        <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_lastname">achternaam *</label>
+                                        <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_email">Email *</label>
+                                        <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="form_phone">Phone</label>
+                                        <input id="form_phone" type="tel" name="phone" class="form-control" placeholder="Please enter your phone">
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="form_message">bericht *</label>
+                                        <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please,leave us a message."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <input type="submit" class="btn btn-success btn-send" value="Send message">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+
+                </div><!-- /.8 -->
+
+            </div> <!-- /.row-->
+
+        </div> <!-- /.container-->
+
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js" integrity="sha256-dHf/YjH1A4tewEsKUSmNnV05DDbfGN3g7NMq86xgGh8=" crossorigin="anonymous"></script>
+        <script src="contact-2.js"></script>
+    </body>
 </html>
