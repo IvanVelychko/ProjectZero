@@ -29,8 +29,9 @@
 }
 
 body {
-    background-image: url("https://images4.alphacoders.com/289/thumb-1920-289526.jpg" bgproperties="fixed");
+    background-image: url("https://images4.alphacoders.com/289/thumb-1920-289526.jpg");
     background-repeat: no-repeat;
+    background-position:center;
     background-size: cover;
 }
 
